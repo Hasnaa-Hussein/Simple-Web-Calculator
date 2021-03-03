@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<script type="text/javascript">
+	function arr() {
+		var x = parseFloat(document.form.x.value);
+		var y = parseFloat(document.form.y.value);
+		if(document.form.op.value == 1){
+			var c = x+y;
+			document.form.reult.value=c;
+		}
+		else if(document.form.op.value == 2){
+			var c = x-y;
+			document.form.reult.value=c;
+		}
+		else if(document.form.op.value == 3){
+			var c = x*y;
+			document.form.reult.value=c;
+		}
+		else if(document.form.op.value == 4){
+			var c = x/y;
+			document.form.reult.value=c;
+		}
+		else if(document.form.op.value == 5){
+			var c = x%y;
+			document.form.reult.value=c;
+		}
+		else if(document.form.op.value == 6){
+			var c = Math.pow(x,y);
+			document.form.reult.value=c;
+		}
+	}
+</script>
+
+<form name="form">
+	Enter x : <input type="number" name="x"><br><br>
+	Enter y : <input type="number" name="y"><br><br> 
+Select Option<select name="op"><option value="1">+</option>
+<option value="2">-</option>
+<option value="3">*</option>
+<option value="4">/</option>
+<option value="5">%</option>
+<option value="6">^</option></select>
+<br><br>
+<input type="button" name="ok" value="ok" onclick="arr()"><br><br>
+Result:<input type="number" name="reult" >
+	</form>
+</body>
+</html>
